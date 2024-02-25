@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:invoice_maker/sign-in/SignInPage.dart';
+import 'package:invoice_maker/sign-up/SignUpPage.dart';
 
 void main() {
   runApp(const InvoiceMakerApp());
@@ -76,6 +77,6 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SignInPage();
+    return const SignUpPage();
   }
 }

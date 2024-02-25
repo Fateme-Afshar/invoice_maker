@@ -12,6 +12,7 @@ class SignUpPage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
+          margin: const EdgeInsets.only(left: 24, right: 24),
           constraints: BoxConstraints(minWidth: 400),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -44,6 +45,9 @@ class SignUpPage extends StatelessWidget {
               InputTextField(
                 key: const Key("confirmPasswordField"),
                 hint: "Confirm Password",
+              ),
+              const SizedBox(
+                height: 15,
               ),
               Button(
                 btnKey: const Key("signupBtn"),
