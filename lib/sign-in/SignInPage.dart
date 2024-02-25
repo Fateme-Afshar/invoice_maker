@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:invoice_maker/custom-widget/CustomButton.dart';
+import 'package:invoice_maker/custom-widget/CustomTextField.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
@@ -9,6 +11,7 @@ class SignInPage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
+          margin: const EdgeInsets.only(left: 24, right: 24),
           alignment: Alignment.center,
           constraints: const BoxConstraints(
             maxWidth: 400,
@@ -17,43 +20,38 @@ class SignInPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Padding(
-                padding: EdgeInsets.fromLTRB(0, 0, 0, 16),
+                padding: EdgeInsets.only(bottom: 16),
                 child: Text(
                   "Sign In your account",
                 ),
               ),
-              const TextField(
-                key: Key("usernameField"),
-                decoration: InputDecoration(hintText: "Username/ Email"),
+              InputTextField(
+                key: const Key("usernameField"),
+                hint: "Username/ Email",
               ),
               const SizedBox(
                 height: 10,
               ),
-              const TextField(
-                key: Key("passwordField"),
-                decoration: InputDecoration(hintText: "Password"),
+              InputTextField(
+                key: const Key("passwordField"),
+                hint: "Password",
               ),
               const SizedBox(
                 height: 15,
               ),
-              SizedBox(
-                height: 50,
-                width: double.infinity,
-                child: ElevatedButton(
-                    key: Key("signinBtn"),
-                    onPressed: () {},
-                    child: const Text(
-                      "Sign In",
-                    )),
+              Button(
+                btnKey: const Key("signinBtn"),
+                buttonText: "Sign In",
+                onPress: () {},
               ),
               const Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(0, 24, 0, 16),
+                  padding: EdgeInsets.only(top: 24, bottom: 16),
                   child: Text(
                     "create an account",
                     textAlign: TextAlign.start,
-                    style: TextStyle(fontSize: 14),
+                    style: TextStyle(fontSize: 18),
                   ),
                 ),
               )

@@ -3,26 +3,26 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:invoice_maker/sign-in/SignInPage.dart';
 
 void main() {
-  testWidgets("Sig in page widget test", (WidgetTester tester) async {
-    await tester.pumpWidget(const MaterialApp(
-      home: SignInPage(),
-    ));
+  group("Sign in page tests", () {
+    testWidgets("Should have username and password fields and a sign-in button", (WidgetTester tester) async {
+      await tester.pumpWidget(const MaterialApp(
+        home: SignInPage(),
+      ));
 
-    expect(find.byType(TextField), findsNWidgets(2));
-    expect(find.widgetWithText(TextField, "Username/ Email"), findsOneWidget);
-    expect(find.widgetWithText(TextField, "Password"), findsOneWidget);
+      final Finder usernameField = find.byKey(Key('usernameField'));
+      final Finder passwordField = find.byKey(Key('passwordField'));
+      final Finder signInBtn = find.byKey(Key('signinBtn'));
 
-    group("Sign in button", () {
-      expect(find.widgetWithText(ElevatedButton, 'Sign In'), findsOneWidget);
+      expect(usernameField, findsOneWidget);
+      expect(passwordField, findsOneWidget);
+      expect(signInBtn, findsOneWidget);
+
+      await tester.enterText(usernameField, "testuser");
+      await tester.enterText(passwordField, "password");
+
+      await tester.tap(signInBtn);
+
+      await tester.pump();
     });
-
-    await tester.enterText(
-        find.widgetWithText(TextField, "Username/ Email"), "testuser");
-    await tester.enterText(
-        find.widgetWithText(TextField, "Password"), "password");
-
-    await tester.tap(find.widgetWithText(ElevatedButton, "Sign In"));
-
-    await tester.pump();
   });
 }

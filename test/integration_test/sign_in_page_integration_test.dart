@@ -12,11 +12,11 @@ void main() {
 
     final Finder usernameField = find.byKey(Key('usernameField'));
     final Finder passwordField = find.byKey(Key('passwordField'));
-    final Finder signInField = find.byKey(Key('signinBtn'));
+    final Finder signInBtn = find.byKey(Key('signinBtn'));
 
     await tester.enterText(usernameField, "username");
     await tester.enterText(passwordField, 'password');
-    await tester.tap(signInField);
+    await tester.tap(signInBtn);
 
     await tester.pumpAndSettle();
   });
