@@ -10,28 +10,28 @@ class SignInPage extends StatelessWidget {
       body: Center(
         child: Container(
           alignment: Alignment.center,
-          constraints: BoxConstraints(
+          constraints: const BoxConstraints(
             maxWidth: 400,
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.fromLTRB(0, 0, 0, 16),
                 child: Text(
                   "Sign In your account",
                 ),
               ),
-              TextField(
+              const TextField(
                 decoration: InputDecoration(hintText: "Username/ Email"),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              TextField(
+              const TextField(
                 decoration: InputDecoration(hintText: "Password"),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               SizedBox(
@@ -39,11 +39,11 @@ class SignInPage extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       "Sign In",
                     )),
               ),
-              Align(
+              const Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(0, 24, 0, 16),
