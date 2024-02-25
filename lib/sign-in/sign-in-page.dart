@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:invoice_maker/custom-widget/CustomButton.dart';
-import 'package:invoice_maker/custom-widget/CustomTextField.dart';
+import 'package:invoice_maker/custom-widget/custom-button.dart';
+import 'package:invoice_maker/custom-widget/custom-text-field.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../custom-widget/CustomButton.dart';
-import '../custom-widget/CustomTextField.dart';
+import '../custom-widget/custom-button.dart';
+import '../custom-widget/custom-text-field.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({super.key});

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:invoice_maker/sign-in/SignInPage.dart';
-import 'package:invoice_maker/sign-up/SignUpPage.dart';
+import 'package:invoice_maker/core/database/appDatabase.dart';
+import 'package:invoice_maker/sign-up/sign-up-page.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await AppDatabase.initialDatabase();
   runApp(const InvoiceMakerApp());
 }
 
