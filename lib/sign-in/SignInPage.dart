@@ -23,12 +23,14 @@ class SignInPage extends StatelessWidget {
                 ),
               ),
               const TextField(
+                key: Key("usernameField"),
                 decoration: InputDecoration(hintText: "Username/ Email"),
               ),
               const SizedBox(
                 height: 10,
               ),
               const TextField(
+                key: Key("passwordField"),
                 decoration: InputDecoration(hintText: "Password"),
               ),
               const SizedBox(
@@ -38,6 +40,7 @@ class SignInPage extends StatelessWidget {
                 height: 50,
                 width: double.infinity,
                 child: ElevatedButton(
+                    key: Key("signinBtn"),
                     onPressed: () {},
                     child: const Text(
                       "Sign In",
