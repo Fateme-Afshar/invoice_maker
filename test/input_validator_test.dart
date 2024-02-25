@@ -1,15 +1,14 @@
-
 import 'package:test/test.dart';
 import 'package:invoice_maker/utils/InputValidator.dart';
 
 void main() {
   late InputValidator validator;
 
-  setUp((){
-    validator=InputValidator();
+  setUp(() {
+    validator = InputValidator();
   });
 
-  group('isEmpty', (){
+  group('isEmpty', () {
     test("return true if the string is empty", () {
       expect(validator.isEmpty("input"), isFalse);
     });
@@ -26,6 +25,16 @@ void main() {
 
     test("should return true if password length is more than 8", () {
       expect(validator.isPasswordLengthValid("123456789"), isTrue);
+    });
+  });
+
+  group("isValidEmail", () {
+    test("should return true if email is valid", () {
+      expect(validator.isValidEmail("test@test.com"), isTrue);
+    });
+
+    test("should return false if email is invalid", () {
+      expect(validator.isValidEmail("test.test"), isFalse);
     });
   });
 }
