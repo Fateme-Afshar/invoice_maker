@@ -6,7 +6,7 @@ abstract class IRepository<T> {
 
   Future<void> update(T obj);
 
-  T? get();
+  T? get(String key);
 
   Iterable<T> getList();
 }

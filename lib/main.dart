@@ -3,6 +3,7 @@ import 'package:hive/hive.dart';
 import 'package:invoice_maker/core/database/appDatabase.dart';
 import 'package:invoice_maker/sign-up/sign-up-page.dart';
 
+import 'model/product.dart';
 import 'model/user.dart';
 
 Future<void> main() async {
@@ -10,6 +11,7 @@ Future<void> main() async {
 
   await AppDatabase.initialDatabase();
   Hive.registerAdapter(UserAdapter());
+  Hive.registerAdapter(ProductAdapter());
   runApp(const InvoiceMakerApp());
 }
 

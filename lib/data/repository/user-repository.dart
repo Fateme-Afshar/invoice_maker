@@ -18,8 +18,8 @@ class UserRepository extends IRepository<User> {
   }
 
   @override
-  User? get() {
-    return box.get(UserSchema.userKey);
+  User? get(String key) {
+    return box.get(key);
   }
 
   @override
