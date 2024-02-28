@@ -1,16 +1,21 @@
 
 import 'package:hive/hive.dart';
 import 'package:invoice_maker/core/database/schema.dart';
+part 'user.g.dart';
 
 @HiveType(typeId: UserSchema.userTypeId)
-class User {
+class User extends HiveObject{
   @HiveField(0)
-  final String username;
+   late  String username;
   @HiveField(1)
-  final String email;
+  late  String email;
   @HiveField(2)
-  final String password;
+  late  String password;
+  @HiveField(3)
+  late  String userKey=UserSchema.userKey;
 
   User.factory(
       {required this.username, required this.email, required this.password});
+
+  User({required this.username, required this.email, required this.password});
 }

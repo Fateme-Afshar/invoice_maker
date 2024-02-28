@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
 import 'package:invoice_maker/core/database/appDatabase.dart';
 import 'package:invoice_maker/sign-up/sign-up-page.dart';
 
+import 'model/user.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   await AppDatabase.initialDatabase();
+  Hive.registerAdapter(UserAdapter());
   runApp(const InvoiceMakerApp());
 }
 
