@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:invoice_maker/sign-up/sign-up-page.dart';
+import 'package:invoice_maker/features/sign-up/sign-up-page.dart';
 
 void main() {
   group("Sign up page test", () {

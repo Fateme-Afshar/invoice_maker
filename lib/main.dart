@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:invoice_maker/core/database/appDatabase.dart';
-import 'package:invoice_maker/sign-up/sign-up-page.dart';
+import 'package:invoice_maker/features/add-product/add-product-page.dart';
+import 'package:invoice_maker/features/add-product/product-info-page.dart';
+import 'package:invoice_maker/features/sign-up/sign-up-page.dart';
 
 import 'model/product.dart';
 import 'model/user.dart';
@@ -36,6 +38,10 @@ class InvoiceMakerApp extends StatelessWidget {
           brightness: Brightness.light,
         ),
         fontFamily: "segoe",
+        iconTheme: const IconThemeData(
+          color: Color.fromARGB(255, 0, 0, 128),
+          size: 24
+        ),
         inputDecorationTheme: const InputDecorationTheme(
             filled: true,
             fillColor: Color.fromARGB(255, 250, 249, 246),
@@ -75,6 +81,13 @@ class InvoiceMakerApp extends StatelessWidget {
           displaySmall:
               TextStyle(fontSize: 25, color: Color.fromARGB(255, 47, 79, 79)),
         ),
+        appBarTheme: const AppBarTheme(
+          backgroundColor:  Color.fromARGB(255, 250, 249, 246),
+          iconTheme: IconThemeData(
+            color: Color.fromARGB(255, 255, 127, 80),
+            size: 24
+          )
+        )
       ),
       home: const MainPage(),
     );
